@@ -10,13 +10,15 @@
 	<div class="row">
 		<% movies.Search.forEach( movie => { %>
 			<div class="col-4">
-				<li class="">
-					<img src="<%= movie.Poster %>">
-					<p><strong>Movie Title</strong></p>
-					<p><%= movie.Title %></p>
-					<p><strong>Year Released:</strong></p>
-					<p><%= movie.Year %></p>
-				</li>
+				<a href="http://www.imdb.com/title/<%= movie.imdbID %>/">
+					<li class="">
+						<img src="<%= movie.Poster %>">
+						<p><strong>Movie Title</strong></p>
+						<p><%= movie.Title %></p>
+						<p><strong>Year Released:</strong></p>
+						<p><%= movie.Year %></p>
+					</li>
+				</a>
 			</div>
 		<% }) %>
 	</div>

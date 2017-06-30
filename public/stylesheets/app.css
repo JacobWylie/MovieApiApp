@@ -7,6 +7,11 @@ li {
 	margin-top: 30px;
 }
 
+li:hover,
+li:focus {
+	opacity: .8;
+}
+
 li,
 li img {
 	max-width: 90%;
@@ -20,6 +25,12 @@ li img {
 
 li p {
 	margin-bottom: 0px;
+	color: black;
+}
+
+a:focus,
+a:hover {
+	text-decoration: none;
 }
 
 li p strong {
