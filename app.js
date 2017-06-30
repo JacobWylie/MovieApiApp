@@ -4,7 +4,7 @@ const express = require('express'),
 app.set('view engine', 'ejs');
 
 // Home Page
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
 	res.render('index');
 });
 
