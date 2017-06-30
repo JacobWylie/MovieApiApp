@@ -1,12 +1,13 @@
-<h1>Here are Your Results</h1>
-<a href="/">
-	<button>Back</button>
+<% include partials/header %>
+
+<h1 class="text-center">Here are Your Results</h1>
+<a href="/" class="">
+	<button type="button" class="btn">Back</button>
 </a>
 
 <ul>
 	<% movies.Search.forEach( movie => { %>
-		<br>
-		<li style="list-style: none;">
+		<li>
 			<p><strong>Movie Title:</strong> <%= movie.Title %></p>
 			<p><strong>Year Released:</strong> <%= movie.Year %></p>
 			<img src="<%= movie.Poster %>">
@@ -15,10 +16,10 @@
 </ul>
 <br>
 <a href="/">
-	<button>Back</button>
+	<button type="button" class="btn">Back</button>
 </a>
 
-
+<% include partials/footer %>
 
 
 	

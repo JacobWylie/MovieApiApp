@@ -1,6 +1,10 @@
-<h1>Search for a Movie with your Favorite Keyword</h1>
+<% include partials/header %>
 
-<form action="/results" method="GET">
+<h1 class="text-center">Search for Movies by Keywords or Title</h1>
+
+<form class="my-5 text-center" action="/results" method="GET">
 	<input type="text" name="search" placeholder="Enter Keyword Here">
 	<button>Search for Movies</button>
 </form>
+
+<% include partials/footer %>

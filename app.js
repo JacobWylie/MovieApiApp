@@ -3,15 +3,20 @@ const express = require('express'),
 	  request = require('request'),
 	  server = require('http').Server(app),
 	  port = process.env.PORT || 8000;
+
+// Use .ejs file format
 app.set('view engine', 'ejs');
 
-// Home Page
+// Serve Static JS and CSS files
+app.use(express.static('public'));
+
+// Home Page Route
 app.get('/', (req, res) => {
 	res.render('index');
 });
 
 
-// API Results from Input Form
+// API Results from Input Form Route
 app.get('/results', (req, res) => {
 	let userKeyword = req.query.search;
 	let url = `http://omdbapi.com/?s=${userKeyword}&apikey=thewdb`;
