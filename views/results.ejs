@@ -1,23 +1,30 @@
 <% include partials/header %>
 
-<h1 class="text-center">Here are Your Results</h1>
-<a href="/" class="">
-	<button type="button" class="btn">Back</button>
-</a>
+<div class="row justify-content-start">
+	<a class="btn btn-secondary" href="/"" role="button">Back</a>
+</div>
 
-<ul>
-	<% movies.Search.forEach( movie => { %>
-		<li>
-			<p><strong>Movie Title:</strong> <%= movie.Title %></p>
-			<p><strong>Year Released:</strong> <%= movie.Year %></p>
-			<img src="<%= movie.Poster %>">
-		</li>
-	<% }) %>
-</ul>
-<br>
-<a href="/">
-	<button type="button" class="btn">Back</button>
-</a>
+<h1 class="text-center">Results:</h1>
+
+	<ul>
+	<div class="row">
+		<% movies.Search.forEach( movie => { %>
+			<div class="col-4">
+				<li class="">
+					<img src="<%= movie.Poster %>">
+					<p><strong>Movie Title</strong></p>
+					<p><%= movie.Title %></p>
+					<p><strong>Year Released:</strong></p>
+					<p><%= movie.Year %></p>
+				</li>
+			</div>
+		<% }) %>
+	</div>
+	</ul>
+
+<div class="row justify-content-center">
+	<a class="btn btn-secondary" href="/"" role="button">Back</a>
+</div>
 
 <% include partials/footer %>
 

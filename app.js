@@ -17,20 +17,19 @@ app.get('/', (req, res) => {
 
 
 // API Results from Input Form Route
-app.get('/results', (req, res) => {
+app.get('/results', (req, res, err) => {
 	let userKeyword = req.query.search;
 	let url = `http://omdbapi.com/?s=${userKeyword}&apikey=thewdb`;
 
 	request(url, function (error, response, body) {
-		if(!error && response.statusCode === 200) {
-			let movies = JSON.parse(body); 
+		let movies = JSON.parse(body);
+		if(!movies["Error"] && response.statusCode === 200) {
 			res.render("results", {movies: movies})
 		} else {
-			// Error Page
-			res.redirect('error')
+			res.redirect('error');
 		}
-	});
-})
+	})				
+});
 
 
 // All Other Requests go to error page
