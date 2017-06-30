@@ -1,6 +1,7 @@
 const express = require('express'),
 	  app = express(),
 	  request = require('request'),
+	  server = require('http').Server(app),
 	  port = process.env.PORT || 8000;
 app.set('view engine', 'ejs');
 
