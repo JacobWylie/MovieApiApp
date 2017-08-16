@@ -18,11 +18,11 @@ app.get('/', (req, res) => {
 
 // API Results from Input Form Route
 app.get('/results', (req, res, err) => {
-	let userKeyword = req.query.search;
-	let url = `http://omdbapi.com/?s=${userKeyword}&apikey=thewdb`;
+	const userKeyword = req.query.search;
+	const url = `http://omdbapi.com/?s=${userKeyword}&apikey=thewdb`;
 
 	request(url, function (error, response, body) {
-		let movies = JSON.parse(body);
+		const movies = JSON.parse(body);
 		if(!movies["Error"] && response.statusCode === 200) {
 			res.render("results", {movies: movies})
 		} else {
