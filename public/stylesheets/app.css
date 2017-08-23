@@ -9,7 +9,7 @@ li {
 
 li:hover,
 li:focus {
-	opacity: .8;
+	opacity: 0.9;
 }
 
 li,
@@ -41,3 +41,19 @@ li p strong {
 	border-radius: 5%;
 	opacity: .8;
 }
+
+.movies {
+	transition: all .2s ease-in-out
+}
+
+.movies:hover {
+	transform: scale(1.1)
+}
+
+
+
+
+
+
+
+
