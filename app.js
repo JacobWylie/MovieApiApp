@@ -11,13 +11,13 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 // Home Page Route
-app.get('/', (req, res) => {
+app.get('/movie', (req, res) => {
 	res.render('index');
 });
 
 
 // API Results from Input Form Route
-app.get('/results', (req, res, err) => {
+app.get('movie/results', (req, res, err) => {
 	const userKeyword = req.query.search;
 	const url = `http://omdbapi.com/?s=${userKeyword}&apikey=thewdb`;
 
