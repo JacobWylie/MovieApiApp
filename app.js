@@ -1,5 +1,6 @@
 const express = require('express'),
 	  app = express(),
+	  path = require('path'),
 	  request = require('request'),
 	  server = require('http').Server(app),
 	  port = process.env.PORT || 8081;
@@ -8,7 +9,7 @@ const express = require('express'),
 app.set('view engine', 'ejs');
 
 // Serve Static JS and CSS files
-app.use(express.static('public'));
+app.use('/public', express.static(path.join(__dirname, '/public')))
 
 // Home Page Route
 app.get('/movie', (req, res) => {
