@@ -9,7 +9,7 @@ const express = require('express'),
 app.set('view engine', 'ejs');
 
 // Serve Static JS and CSS files
-app.use('/movie/public', express.static(path.join(__dirname, 'public')))
+app.use('/public', express.static(path.join(__dirname + '/public')))
 
 // Home Page Route
 app.get('/movie', (req, res) => {
