@@ -2,7 +2,7 @@ const express = require('express'),
 	  app = express(),
 	  request = require('request'),
 	  server = require('http').Server(app),
-	  port = process.env.PORT || 8000;
+	  port = process.env.PORT || 8081;
 
 // Use .ejs file format
 app.set('view engine', 'ejs');
@@ -37,8 +37,8 @@ app.get('*', (req, res) => {
 	res.render('error')
 })
 
-// Allows Heroku to set port at run time
-server.listen(port, function() {
+// Allows server to set port at run time
+server.listen(port, () => {
     console.log("App is running on port " + port);
 });
 
