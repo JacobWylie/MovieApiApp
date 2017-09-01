@@ -25,7 +25,7 @@ app.get('/movie/results', (req, res, err) => {
 	request(url, function (error, response, body) {
 		const movies = JSON.parse(body);
 		if(!movies["Error"] && response.statusCode === 200) {
-			res.render("results", {movies: movies})
+			res.render("results", {movies: movies, userKeyword: userKeyword})
 		} else {
 			res.redirect('error');
 		}
