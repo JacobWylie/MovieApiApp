@@ -15,7 +15,6 @@ app.get('/movie', (req, res) => {
 	res.render('index');
 });
 
-
 // API Results from Input Form Route
 app.get('/movie/results', (req, res, err) => {
 	const userKeyword = req.query.search;
