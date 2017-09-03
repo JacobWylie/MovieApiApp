@@ -8,7 +8,7 @@ const express = require('express'),
 app.set('view engine', 'ejs');
 
 // Serve Static CSS files
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/stylesheets'));
 
 
 // Home Page Route

@@ -1,0 +1,72 @@
+body {
+	background: url(movie.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+}
+
+h1 {
+	margin-top: 30px;
+}
+li {
+	list-style: none;
+	text-align: center;
+	margin-top: 30px;
+}
+
+li:hover,
+li:focus {
+	opacity: 0.9;
+}
+
+li,
+li img {
+	max-width: 90%;
+	border-radius: 5px;
+}
+
+li img {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+li p {
+	margin-bottom: 0px;
+	color: white;
+}
+
+a:focus,
+a:hover {
+	text-decoration: none;
+}
+
+li p strong {
+	text-decoration: underline;
+}
+
+.error {
+	border-radius: 5%;
+	opacity: .8;
+}
+
+.movies {
+	transition: all .2s ease-in-out
+}
+
+.movies:hover {
+	transform: scale(1.1)
+}
+
+.margin-top {
+	margin-top: 100px;
+}
+
+
+
+
+
+
+
+
